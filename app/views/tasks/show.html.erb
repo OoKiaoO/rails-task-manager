@@ -1,0 +1,17 @@
+<div class="nav">
+  <h1><%= @task.title %></h1>
+  <p><i class="fas fa-pencil-alt"></i><%= link_to "Edit this task", edit_task_path %></p>
+</div>
+<h3 id="details"><%= @task.details %></h3>
+<% if @task.completed %>
+  <div class="task">
+    <i class="far fa-check-square"></i>
+    <p>This task is completed</p>
+  </div>
+<% else %>
+  <div class="task">
+    <i class="far fa-square"></i>
+    <p>This task is not completed</p>
+  </div>
+<% end %>
+<p><%= link_to "Back to list", tasks_path %></p>
